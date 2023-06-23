@@ -171,22 +171,22 @@ ALTER TABLE rectoria ADD CONSTRAINT fk_cod_directivo FOREIGN KEY(cod_directivo) 
 ALTER TABLE rectoria ADD CONSTRAINT fk_cod_rect_inst_munic FOREIGN KEY(cod_inst,cod_munic) REFERENCES inst_por_municipio(cod_inst,cod_munic);
 
 
-COPY naturaleza_juridica(cod_juridica,nomb_juridica) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/naturaleza_juridica.csv' DELIMITER ',' CSV HEADER;
-COPY seccional(cod_seccional,nomb_seccional) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/seccional.csv' DELIMITER ',' CSV HEADER;
-COPY acto_admon(cod_admon,nomb_admon) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/acto_admon.csv' DELIMITER ',' CSV HEADER;
-COPY norma_creacion(cod_norma,nomb_norma) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/norma_creacion.csv' DELIMITER ',' CSV HEADER;
-COPY estado(cod_estado,nomb_estado) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/estado.csv' DELIMITER ',' CSV HEADER;
-COPY departamento(cod_depto,nomb_depto) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/departamento.csv' DELIMITER ',' CSV HEADER;
-COPY municipio(cod_munic,nomb_munic,cod_depto) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/municipio.csv' DELIMITER ',' CSV HEADER;
-COPY sectores(cod_sector,nomb_sector) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/sectores.csv' DELIMITER ',' CSV HEADER;
-COPY caracter_academico(cod_academ,nomb_academ) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/caracter_academico.csv' DELIMITER ',' CSV HEADER;
-COPY instituciones(codigo_ies_padre,nomb_inst,cod_sector,cod_academ) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/instituciones.csv' DELIMITER ',' CSV HEADER;
+COPY naturaleza_juridica(cod_juridica,nomb_juridica) FROM '/tmp/naturaleza_juridica.csv' DELIMITER ',' CSV HEADER;
+COPY seccional(cod_seccional,nomb_seccional) FROM '/tmp/seccional.csv' DELIMITER ',' CSV HEADER;
+COPY acto_admon(cod_admon,nomb_admon) FROM '/tmp/acto_admon.csv' DELIMITER ',' CSV HEADER;
+COPY norma_creacion(cod_norma,nomb_norma) FROM '/tmp/norma_creacion.csv' DELIMITER ',' CSV HEADER;
+COPY estado(cod_estado,nomb_estado) FROM '/tmp/estado.csv' DELIMITER ',' CSV HEADER;
+COPY departamento(cod_depto,nomb_depto) FROM '/tmp/departamento.csv' DELIMITER ',' CSV HEADER;
+COPY municipio(cod_munic,nomb_munic,cod_depto) FROM '/tmp/municipio.csv' DELIMITER ',' CSV HEADER;
+COPY sectores(cod_sector,nomb_sector) FROM '/tmp/sectores.csv' DELIMITER ',' CSV HEADER;
+COPY caracter_academico(cod_academ,nomb_academ) FROM '/tmp/caracter_academico.csv' DELIMITER ',' CSV HEADER;
+COPY instituciones(codigo_ies_padre,nomb_inst,cod_sector,cod_academ) FROM '/tmp/instituciones.csv' DELIMITER ',' CSV HEADER;
 COPY inst_por_municipio(direccion,telefono,norma,fecha_creacion,
 programas_vigente,acreditada,fecha_acreditacion,resolucion_acreditacion,vigencia,nit,
 pagina_web,cod_inst,cod_munic,codigo_ies_padre,cod_juridica,cod_seccional,cod_admon,cod_norma,cod_estado
-) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/inst_por_municipio.csv' DELIMITER ',' CSV HEADER;
-COPY cargos(cod_cargo,nomb_cargo) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/cargos.csv' DELIMITER ',' CSV HEADER;
-COPY acto_nombramiento(cod_nombram,nomb_nombram) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/acto_nombramiento.csv' DELIMITER ',' CSV HEADER;
-COPY directivos(cod_directivo,nomb_directivo,apell_directivo) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/directivos.csv' DELIMITER ',' CSV HEADER;
+) FROM '/tmp/inst_por_municipio.csv' DELIMITER ',' CSV HEADER;
+COPY cargos(cod_cargo,nomb_cargo) FROM '/tmp/cargos.csv' DELIMITER ',' CSV HEADER;
+COPY acto_nombramiento(cod_nombram,nomb_nombram) FROM '/tmp/acto_nombramiento.csv' DELIMITER ',' CSV HEADER;
+COPY directivos(cod_directivo,nomb_directivo,apell_directivo) FROM '/tmp/directivos.csv' DELIMITER ',' CSV HEADER;
 COPY rectoria(fecha_inicio,fecha_final,cod_directivo,cod_inst,cod_munic,cod_cargo,cod_nombram
-) FROM '/opt/lampp/htdocs/proyecto_bases/ARCHIVOS_INDIVIDUALES_CSV/rectoria.csv' DELIMITER ',' CSV HEADER;
+) FROM '/tmp/rectoria.csv' DELIMITER ',' CSV HEADER;

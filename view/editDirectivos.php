@@ -31,7 +31,7 @@ else{
   </div>
   <div>
   <input type="submit" class="btn btn-success" value="ACTUALIZAR">
-  <a class="btn btn-danger"href="showDirectivo.php?id=<?= $directivo [0]?>">CANCELAR</a>
+  <a class="btn btn-danger"href="showDirectivos.php?cod_directivo=<?= $directivo [0]?>">CANCELAR</a>
   </div>
  </form>
  <?php

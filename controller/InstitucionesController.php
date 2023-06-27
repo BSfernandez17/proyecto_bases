@@ -18,5 +18,11 @@
         public function mostrar($codigo_ies_padre){
             return ($this->model->show($codigo_ies_padre)!=false) ? $this->model->mostrar($codigo_ies_padre) : header("Location:index.php");
         }
+        public function cobertura($departamento,$municipio){
+            return($this->model->cobertura($departamento,$municipio)) ? $this->model->cobertura($departamento,$municipio) : false;
+        }
+        public function Instituciones_por_acto($nomb_municipio){
+            return($this->model->Instituciones_por_acto($nomb_municipio))? $this->model->Instituciones_por_acto($nomb_municipio): false;
+        }
     }
 ?>

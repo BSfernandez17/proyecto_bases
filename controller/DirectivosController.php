@@ -16,7 +16,9 @@
         {
             return($this->model->update($cod_directivo,$nomb_directivo,$apell_directivo)!=false)? header("Location:showDirectivos.php?=".$cod_directivo): header("Location:Directivos.php");
         }
+        public function generarReporteDirectivos($codigo_ies_padre, $fecha_inicio, $fecha_final){
+            return($this->model->generarReporteDirectivos($codigo_ies_padre, $fecha_inicio, $fecha_final)) ? $this->model->generarReporteDirectivos($codigo_ies_padre, $fecha_inicio, $fecha_final):false;
+            
+        }
     }
-
-
 ?>

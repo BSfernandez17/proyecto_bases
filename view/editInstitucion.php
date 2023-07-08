@@ -13,7 +13,7 @@ else{
 <form action="updateInstituciones.php" method="POST">
     <h2>MODIFICANDO REGISTRO</h2>
  <div class="mb-3 row">
-    <label for="staticEmail" class="col-sm-2 col-form-label">ID</label>
+    <label for="staticEmail" class="col-sm-2 col-form-label">codigo_ies_padre</label>
     <div class="col-sm-10">
       <input type="text" name="codigo_ies_padre" readonly class="form-control-plaintext" id="staticEmail" value="<?= $institucion[0]?>">
     </div>
@@ -36,7 +36,7 @@ else{
   </div>
   <div>
   <input type="submit" class="btn btn-success" value="ACTUALIZAR">
-  <a class="btn btn-danger"href="show.php?id=<?= $institucion [0]?>">CANCELAR</a>
+  <a class="btn btn-danger"href="showInstitucion.php?id=<?= $institucion [0]?>">CANCELAR</a>
   </div>
  </form>
  <?php
